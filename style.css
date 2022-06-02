@@ -1,6 +1,17 @@
-body {
+* {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
+  font-family: "Nunito", sans-serif;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+body {
   background-color: #0197f6;
   height: 100vh;
 }
@@ -16,27 +27,27 @@ body {
 .container {
   background-color: aliceblue;
   border-radius: 10px;
-  width: 300px;
-  min-height: 45px;
-  display: inline;
-  padding: 15px;
-  padding-top: 25px;
+  width: fit-content;
+  padding: 25px;
 }
 
 #form {
-  width: 310px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
 }
 
 #add-btn {
-  height: 30px;
-  width: 60px;
+  width: fit-content;
+  padding: 7px 20px;
   border-radius: 5px;
   border: 0;
   font-size: 15px;
   background-color: #0197f6;
   color: white;
   cursor: pointer;
-  transition: 0.25s ease-in;
+  transition: 0.35s ease-in;
 }
 
 #add-btn:hover {
@@ -45,23 +56,25 @@ body {
 }
 
 #item {
-  margin: 0 10px;
   border-radius: 3px;
-  padding: 10px;
+  padding: 8px 10px;
   border: 1px solid rgb(0, 0, 0, 0.15);
   font-size: 15px;
 }
 
+#item:focus {
+  outline: none;
+}
+
 ul {
   list-style: none;
-  padding: 0 15px;
 }
 
 ul > li {
-  font-size: 17px;
-  padding: 7.5px 5px;
+  font-size: 15px;
+  padding: 8px 7px;
   border-radius: 5px;
-  margin-top: 7px;
+  margin-top: 10px;
   background-color: #64bdf5da;
 }
 
@@ -102,4 +115,8 @@ li span {
 .checked {
   text-decoration: line-through;
   color: rgba(0, 0, 0, 0.5);
+}
+
+#task-text {
+  display: none;
 }
